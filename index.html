@@ -1,11 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My 4th Assignment</title>
+
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font icon -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
-    
-</body>
+<style>
+    body{
+        background-color: #F8FAFC;
+    }
+</style>
+
+<body">
+    <header class="w-[80%] mx-auto space-y-5">
+        <h1 class="text-3xl font-bold text-[#002C5C]">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-5">
+            <div class="bg-[#FFFFFF] p-5 rounded-xl">
+                <p>Total</p>
+                <p id="total" class="font-bold text-[#002C5C]">0</p>
+            </div>
+
+            <div class="bg-[#FFFFFF] p-5 rounded-xl">
+                <p>Interview</p>
+                <p id="interview" class="font-bold text-[#10B981]">0</p>
+            </div>
+
+            <div class="bg-[#FFFFFF] p-5 rounded-xl">
+                <p>Rejected</p>
+                <p id="rejected" class="font-bold text-[#EF4444]">0</p>
+            </div>
+        </div>
+    </header>
+
+    <hr class="my-[30px] w-[80%] mx-auto text-gray-200">
+
+    <main class="w-[80%] mx-auto">
+        <div class="flex justify-between my-6">
+            <h1 class="text-[#002C5C] font-bold ">Available Jobs</h1>
+            <div>
+                <p class="text-[#64748B]">8 jobs</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="toggleStyle('all-btn')" class="btn btn-primary border-none px-7" id="all-btn">All</button>
+            <button onclick="toggleStyle('interview-btn')" class="btn" id="interview-btn">Interview</button>
+            <button onclick="toggleStyle('rejected-btn')" class="btn" id="rejected-btn">Rejected</button>
+        </div>
+
+
+
+        <section id="allCards" class="py-4 space-y-4">
+            <!-- card 1 -->
+            <div class="bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
+                <!-- card 1 -->
+                <div class="right">
+                    <h1 class="text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
+                    <div>
+                        <p class="my-1 text-[#64748B] ">React Native Developer</p>
+                        <p class="my-5 text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button id="not-appiled-btn" class="btn bg-blue-100 text-[#002C5C]">Not Applied</button>
+                        <p class="my-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="">
+                        <button id="applied-interview-btn" class="btn btn-outline btn-success">interview</button>
+                        <button id="applied-rejected-btn" class="btn btn-outline btn-error">Rejected</button>
+                    </div>
+                </div>
+
+                <div class="left" >
+                    <button id="delete-btn" class="btn rounded-full h-8 w-3"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
+                
+                <div class="right">
+                    <h1 class="text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
+                    <div>
+                        <p class="my-1 text-[#64748B] ">React Native Developer</p>
+                        <p class="my-5 text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button id="not-appiled-btn" class="btn bg-blue-100 text-[#002C5C]">Not Applied</button>
+                        <p class="my-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="">
+                        <button id="applied-interview-btn" class="btn btn-outline btn-success">interview</button>
+                        <button id="applied-rejected-btn" class="btn btn-outline btn-error">Rejected</button>
+                    </div>
+                </div>
+
+                <div class="left" >
+                    <button id="delete-btn" class="btn rounded-full h-8 w-3"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
+                
+                <div class="right">
+                    <h1 class="text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
+                    <div>
+                        <p class="my-1 text-[#64748B] ">React Native Developer</p>
+                        <p class="my-5 text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button id="not-appiled-btn" class="btn bg-blue-100 text-[#002C5C]">Not Applied</button>
+                        <p class="my-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="">
+                        <button id="applied-interview-btn" class="btn btn-outline btn-success">interview</button>
+                        <button id="applied-rejected-btn" class="btn btn-outline btn-error">Rejected</button>
+                    </div>
+                </div>
+
+                <div class="left" >
+                    <button id="delete-btn" class="btn rounded-full h-8 w-3"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            
+            <!-- card 4 -->
+            <div class="bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
+                
+                <div class="right">
+                    <h1 class="text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
+                    <div>
+                        <p class="my-1 text-[#64748B] ">React Native Developer</p>
+                        <p class="my-5 text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button id="not-appiled-btn" class="btn bg-blue-100 text-[#002C5C]">Not Applied</button>
+                        <p class="my-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="">
+                        <button id="applied-interview-btn" class="btn btn-outline btn-success">interview</button>
+                        <button id="applied-rejected-btn" class="btn btn-outline btn-error">Rejected</button>
+                    </div>
+                </div>
+
+                <div class="left" >
+                    <button id="delete-btn" class="btn rounded-full h-8 w-3"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+
+            <!-- <!-- card 5 -->
+            <div class="bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
+                
+                <div class="right">
+                    <h1 class="text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
+                    <div>
+                        <p class="my-1 text-[#64748B] ">React Native Developer</p>
+                        <p class="my-5 text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button id="not-appiled-btn" class="btn bg-blue-100 text-[#002C5C]">Not Applied</button>
+                        <p class="my-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="">
+                        <button id="applied-interview-btn" class="btn btn-outline btn-success">interview</button>
+                        <button id="applied-rejected-btn" class="btn btn-outline btn-error">Rejected</button>
+                    </div>
+                </div>
+
+                <div class="left" >
+                    <button id="delete-btn" class="btn rounded-full h-8 w-3"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+
+            <!-- <!-- card 6 -->
+            <div class="bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
+                
+                <div class="right">
+                    <h1 class="text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
+                    <div>
+                        <p class="my-1 text-[#64748B] ">React Native Developer</p>
+                        <p class="my-5 text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button id="not-appiled-btn" class="btn bg-blue-100 text-[#002C5C]">Not Applied</button>
+                        <p class="my-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="">
+                        <button id="applied-interview-btn" class="btn btn-outline btn-success">interview</button>
+                        <button id="applied-rejected-btn" class="btn btn-outline btn-error">Rejected</button>
+                    </div>
+                </div>
+
+                <div class="left" >
+                    <button id="delete-btn" class="btn rounded-full h-8 w-3"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            
+            <!-- <!-- card 7 -->
+            <div class="bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
+                
+                <div class="right">
+                    <h1 class="text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
+                    <div>
+                        <p class="my-1 text-[#64748B] ">React Native Developer</p>
+                        <p class="my-5 text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button id="not-appiled-btn" class="btn bg-blue-100 text-[#002C5C]">Not Applied</button>
+                        <p class="my-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="">
+                        <button id="applied-interview-btn" class="btn btn-outline btn-success">interview</button>
+                        <button id="applied-rejected-btn" class="btn btn-outline btn-error">Rejected</button>
+                    </div>
+                </div>
+
+                <div class="left" >
+                    <button id="delete-btn" class="btn rounded-full h-8 w-3"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+
+            <!-- <!-- card 8 -->
+            <div class="bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
+                
+                <div class="right">
+                    <h1 class="text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
+                    <div>
+                        <p class="my-1 text-[#64748B] ">React Native Developer</p>
+                        <p class="my-5 text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <button id="not-appiled-btn" class="btn bg-blue-100 text-[#002C5C]">Not Applied</button>
+                        <p class="my-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="">
+                        <button id="applied-interview-btn" class="btn btn-outline btn-success">interview</button>
+                        <button id="applied-rejected-btn" class="btn btn-outline btn-error">Rejected</button>
+                    </div>
+                </div>
+
+                <div class="left" >
+                    <button id="delete-btn" class="btn rounded-full h-8 w-3"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./script.js"></script>
+    </body>
+
 </html>
