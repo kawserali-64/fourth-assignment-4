@@ -6,6 +6,8 @@ let total = document.getElementById('total');
 let interview = document.getElementById('interview');
 let rejected = document.getElementById('rejected');
 
+let jobCount = document.getElementById('job-count')
+
 //toggle id
 const allFilterBtn = document.getElementById('all-btn')
 const interviewFilterBtn = document.getElementById('interview-btn');
@@ -21,40 +23,56 @@ function calculateCount() {
     total.innerText = allCardSection.children.length;
     interview.innerText = interviewList.length;
     rejected.innerText = rejectList.length;
-}
+
+    jobCount.innerText = allCardSection.children.length;
+   
+      if(currentStatus === 'all-btn'){
+        jobCount.innerText = `${allCardSection.children.length} All Jobs `;
+    } 
+    else if(currentStatus === 'interview-btn'){
+        jobCount.innerText = `${interviewList.length} of ${allCardSection.children.length} jobs`;
+    } 
+    else if(currentStatus === 'rejected-btn'){
+        jobCount.innerText = `${rejectList.length} of ${allCardSection.children.length} jobs`;
+    }
+} 
+
 calculateCount()
 
 // toggle function
 function toggleStyle(id) {
-
     allFilterBtn.classList.remove('btn-primary');
     interviewFilterBtn.classList.remove('btn-primary');
     rejectedFilterBtn.classList.remove('btn-primary');
-
+    
     document.getElementById(id).classList.add('btn-primary');
     currentStatus = id;
 
     if (id == 'interview-btn') {
         allCardSection.classList.add('hidden');
         filterSection.classList.remove('hidden');
-        renderInterview()
+        renderInterview();
+        calculateCount();
     }
+
     else if (id == 'all-btn') {
         allCardSection.classList.remove('hidden');
         filterSection.classList.add('hidden');
-    } else if (id == 'rejected-btn'){
+        calculateCount();
+    } 
+    else if (id == 'rejected-btn'){
         allCardSection.classList.add('hidden');
         filterSection.classList.remove('hidden');
-        renderReject()
+        renderReject();
+        calculateCount();
     }
 
 }
 
 // interview function
 mainContainer.addEventListener('click', function (event) {
-           // delete button click
-    if (event.target.closest('.delete-btn')) {
 
+    if (event.target.closest('.delete-btn')) {
         const card = event.target.closest('.job-card');
 
         const companyName = card.querySelector('.mobileCorp').innerText;
@@ -195,7 +213,7 @@ function renderInterview() {
         console.log(item);
 
         let div = document.createElement('div');
-        div.className = 'bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl';
+        div.className = 'job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl';
 
         div.innerHTML = `
            <div class="right">
@@ -269,7 +287,7 @@ function renderReject() {
         console.log(item);
 
         let div = document.createElement('div');
-        div.className = 'bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl';
+        div.className = 'job-card  bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl';
 
         div.innerHTML = `
            <div class="right">

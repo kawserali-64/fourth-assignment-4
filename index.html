@@ -49,7 +49,7 @@
         <div class="flex justify-between my-6">
             <h1 class="text-[#002C5C] font-bold ">Available Jobs</h1>
             <div>
-                <p class="text-[#64748B]">8 jobs</p>
+                <p id="job-count" class="text-[#64748B]">8 jobs</p>
             </div>
         </div>
         <div>
@@ -58,7 +58,7 @@
             <button onclick="toggleStyle('rejected-btn')" class="btn" id="rejected-btn">Rejected</button>
         </div>
 
-        <!-- fitered card -->
+        
         <section id="filterSection" class="hidden space-y-4 mt-4">
 
         </section>
@@ -68,7 +68,6 @@
         <section id="allCards" class="py-4 space-y-4">
             <!-- card 1 -->
             <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
-                <!-- card 1 -->
                 <div class="right">
                     <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">Mobile First Corp</h1>
                     <div>
@@ -91,18 +90,14 @@
 
             <!-- card 2 -->
             <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
-                <!-- card 1 -->
                 <div class="right">
                     <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">WebFlow Agency</h1>
                     <div>
                         <p class="reactNative my-1 text-[#64748B]">Web Designer & Developer</p>
-                        <p class="remote-doller my-5 text-[#64748B]">Los Angeles, CA
-                            •
-                            Part-time
-                            •
-                            $80,000 - $120,000</p>
+                        <p class="remote-doller my-5 text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                         <button class="not-appiled-btn btn bg-blue-100 text-[#002C5C]">Not Applied</button>
-                        <p class="statusNotes my-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <p class="statusNotes my-5">Create stunning web experiences for high-profile clients. Must have
+                            portfolio and experience with modern web design trends.</p>
                     </div>
                     <div class="">
                         <button class="applied-interview-btn btn btn-outline btn-success">interview</button>
@@ -117,18 +112,15 @@
 
             <!-- card 3 -->
             <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
-                <!-- card 1 -->
                 <div class="right">
-                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">WebFlow Agency</h1>
+                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">DataViz Solutions</h1>
                     <div>
-                        <p class="reactNative my-1 text-[#64748B]">Web Designer & Developer</p>
-                        <p class="remote-doller my-5 text-[#64748B]">Los Angeles, CA
-                            •
-                            Part-time
-                            •
-                            $80,000 - $120,000</p>
+                        <p class="reactNative my-1 text-[#64748B]">Data Visualization Specialist</p>
+                        <p class="remote-doller my-5 text-[#64748B]">Boston, MA • Full-time • $125,000 - $165,000</p>
                         <button class="not-appiled-btn btn bg-blue-100 text-[#002C5C]">Not Applied</button>
-                        <p class="statusNotes my-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <p class="statusNotes my-5">Transform complex data into compelling visualizations. Required
+                            skills: D3.js, React, and strong analytical thinking.
+                        </p>
                     </div>
                     <div class="">
                         <button class="applied-interview-btn btn btn-outline btn-success">interview</button>
@@ -143,18 +135,14 @@
 
             <!-- card 4 -->
             <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
-                <!-- card 1 -->
                 <div class="right">
-                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">WebFlow Agency</h1>
+                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">CloudFirst Inc</h1>
                     <div>
-                        <p class="reactNative my-1 text-[#64748B]">Web Designer & Developer</p>
-                        <p class="remote-doller my-5 text-[#64748B]">Los Angeles, CA
-                            •
-                            Part-time
-                            •
-                            $80,000 - $120,000</p>
+                        <p class="reactNative my-1 text-[#64748B]">Backend Developer</p>
+                        <p class="remote-doller my-5 text-[#64748B]">Seattle, WA • Full-time • $140,000 - $190,000</p>
                         <button class="not-appiled-btn btn bg-blue-100 text-[#002C5C]">Not Applied</button>
-                        <p class="statusNotes my-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <p class="statusNotes my-5">Design and maintain scalable backend systems using Python and AWS.
+                            Work with modern DevOps practices and cloud infrastructure.</p>
                     </div>
                     <div class="">
                         <button class="applied-interview-btn btn btn-outline btn-success">interview</button>
@@ -168,19 +156,15 @@
             </div>
 
             <!-- card 5 -->
-          <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
-                <!-- card 1 -->
+            <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
                 <div class="right">
-                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">WebFlow Agency</h1>
+                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">Innovation Labs</h1>
                     <div>
-                        <p class="reactNative my-1 text-[#64748B]">Web Designer & Developer</p>
-                        <p class="remote-doller my-5 text-[#64748B]">Los Angeles, CA
-                            •
-                            Part-time
-                            •
-                            $80,000 - $120,000</p>
+                        <p class="reactNative my-1 text-[#64748B]">UI/UX Engineer</p>
+                        <p class="remote-doller my-5 text-[#64748B]">Austin, TX • Full-time • $110,000 - $150,000</p>
                         <button class="not-appiled-btn btn bg-blue-100 text-[#002C5C]">Not Applied</button>
-                        <p class="statusNotes my-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <p class="statusNotes my-5">Create beautiful and functional user interfaces for our suite of
+                            products. Strong design skills and frontend development expertise required.</p>
                     </div>
                     <div class="">
                         <button class="applied-interview-btn btn btn-outline btn-success">interview</button>
@@ -193,19 +177,16 @@
                 </div>
             </div>
             <!--  card 6 -->
-             <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
-                <!-- card 1 -->
+            <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
                 <div class="right">
-                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">WebFlow Agency</h1>
+                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">MegaCorp Solutions</h1>
                     <div>
-                        <p class="reactNative my-1 text-[#64748B]">Web Designer & Developer</p>
-                        <p class="remote-doller my-5 text-[#64748B]">Los Angeles, CA
-                            •
-                            Part-time
-                            •
-                            $80,000 - $120,000</p>
+                        <p class="reactNative my-1 text-[#64748B]">JavaScript Developer</p>
+                        <p class="remote-doller my-5 text-[#64748B]">New York, NY • Full-time • $130,000 - $170,000</p>
                         <button class="not-appiled-btn btn bg-blue-100 text-[#002C5C]">Not Applied</button>
-                        <p class="statusNotes my-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <p class="statusNotes my-5">Build enterprise applications with JavaScript and modern frameworks.
+                            We offer competitive compensation, health insurance, and professional development
+                            opportunities.</p>
                     </div>
                     <div class="">
                         <button class="applied-interview-btn btn btn-outline btn-success">interview</button>
@@ -220,18 +201,14 @@
 
             <!-- card 7 -->
             <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
-                <!-- card 1 -->
                 <div class="right">
-                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">WebFlow Agency</h1>
+                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">StartupXYZ</h1>
                     <div>
-                        <p class="reactNative my-1 text-[#64748B]">Web Designer & Developer</p>
-                        <p class="remote-doller my-5 text-[#64748B]">Los Angeles, CA
-                            •
-                            Part-time
-                            •
-                            $80,000 - $120,000</p>
+                        <p class="reactNative my-1 text-[#64748B]">Full Stack Engineer</p>
+                        <p class="remote-doller my-5 text-[#64748B]">Remote • Full-time • $120,000 - $160,000</p>
                         <button class="not-appiled-btn btn bg-blue-100 text-[#002C5C]">Not Applied</button>
-                        <p class="statusNotes my-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <p class="statusNotes my-5">Join our fast-growing startup and work on our core platform.
+                            Experience with Node.js and React required. Great benefits and equity package included.</p>
                     </div>
                     <div class="">
                         <button class="applied-interview-btn btn btn-outline btn-success">interview</button>
@@ -246,18 +223,13 @@
 
             <!-- card 8 -->
             <div class="job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl">
-                <!-- card 1 -->
                 <div class="right">
-                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">WebFlow Agency</h1>
+                    <h1 class="mobileCorp text-[#002C5C] text-xl font-bold">TechCorp Industries</h1>
                     <div>
-                        <p class="reactNative my-1 text-[#64748B]">Web Designer & Developer</p>
-                        <p class="remote-doller my-5 text-[#64748B]">Los Angeles, CA
-                            •
-                            Part-time
-                            •
-                            $80,000 - $120,000</p>
+                        <p class="reactNative my-1 text-[#64748B]">Senior Frontend Developer</p>
+                        <p class="remote-doller my-5 text-[#64748B]">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                         <button class="not-appiled-btn btn bg-blue-100 text-[#002C5C]">Not Applied</button>
-                        <p class="statusNotes my-5">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                        <p class="statusNotes my-5">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     </div>
                     <div class="">
                         <button class="applied-interview-btn btn btn-outline btn-success">interview</button>
