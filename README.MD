@@ -22,5 +22,5 @@
 
 <!-- question 5 -->
 ### 5. What is the difference between preventDefault() and stopPropagation() methods?
-<!-- answer 4 -->
+<!-- answer 5 -->
 ### 5. answer => preventDefault() → Stops the browser’s default action. || stopPropagation() → Stops the event from bubbling up or capturing down the DOM. 
