@@ -127,9 +127,6 @@ mainContainer.addEventListener('click', function (event) {
         renderReject()
 
        }
-
-  
-       
     }
 
     else if (event.target.classList.contains('applied-rejected-btn')) {
@@ -172,7 +169,7 @@ mainContainer.addEventListener('click', function (event) {
 
 
 
-//interview creat section
+//interview section
 
 function renderInterview() {
 
@@ -210,8 +207,6 @@ function renderInterview() {
 }
 
     for (let item of interviewList) {
-        console.log(item);
-
         let div = document.createElement('div');
         div.className = 'job-card bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl';
 
@@ -245,6 +240,8 @@ function renderInterview() {
         filterSection.appendChild(div);
     }
 }
+
+    //rejected section
 
 function renderReject() {
 
@@ -284,8 +281,6 @@ function renderReject() {
 
 
     for (let item of rejectList) {
-        console.log(item);
-
         let div = document.createElement('div');
         div.className = 'job-card  bg-[#FFFFFF] flex justify-between shadow-sm p-6 rounded-2xl';
 
